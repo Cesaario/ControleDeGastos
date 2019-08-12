@@ -1,0 +1,37 @@
+.loginContainer {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 20px 50px 20px;
+}
+
+.avatar {
+    height: 120px;
+    width: 120px;
+}
+
+.nome {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.conteudoCard {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo p {
+    font-size: 20;
+    margin: 10px 0px 20px 0px;
+}

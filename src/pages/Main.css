@@ -1,0 +1,11 @@
+.containerMenu {
+    width: 250;
+}
+
+.routerMain {
+    height: calc(100% - 56px);
+}
+
+.divMain {
+    height: 100%;
+}

@@ -1,0 +1,64 @@
+.extratoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    height: 100%;
+    overflow: scroll;
+}
+
+.cardContainer {
+    margin: 20px;
+    width: 75%;
+}
+
+.listItemContainer {
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.listContainer .valor{
+    font-size: 1rem;
+    color: #990000;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    margin: 4px 10px;
+}
+
+.listContainer .desc{
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    margin-left: 10px;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.listContainer .valorSoma{
+    font-size: 1rem;
+    color: #007519;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    margin: 4px 10px;
+}
+
+.listContainer .descSoma{
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    color: #007519;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    margin-left: 10px;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

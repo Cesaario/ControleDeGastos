@@ -1,0 +1,12 @@
+Rotas:
+    -Adicionar Gasto
+    -Extrato
+    -Gráficos
+    -Configurações
+    -Fatura
+
+    --Login
+
+Menu:
+    -...Rotas
+    -Sair

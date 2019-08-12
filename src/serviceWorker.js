@@ -51,6 +51,15 @@ export function register(config) {
         registerValidSW(swUrl, config);
       }
     });
+
+    window.self.addEventListener('install', evt => {
+      console.log('instalado!!');
+    });
+
+    window.self.addEventListener('activate', evt => {
+      console.log('activated');
+    })
+
   }
 }
 
