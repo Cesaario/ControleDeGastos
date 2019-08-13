@@ -55,7 +55,7 @@ export default function (props) {
             dataFatura: parseInt(data),
             limite: parseInt(limite),
             cor,
-            senha: senha
+            senha: parseInt(senha)
         };
         db.collection('usuarios').add(user).then((doc) => {
             const id = doc.id;
