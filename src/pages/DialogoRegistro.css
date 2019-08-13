@@ -1,0 +1,37 @@
+.containerCriarConta .titulo {
+    margin: 20px auto;
+    font-size: 24px;
+}
+
+.containerCriarConta form {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerCriarConta input {
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.containerCriarConta form button {
+    margin: 10px auto;
+    width: 75%;
+    border: 0;
+    border-radius: 24px;
+    height: 48px;
+    font-size: 16px;
+    background: #ff3300;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px 0px grey;
+}
+
+.containerCriarConta .subtitulo {
+    margin: 0px 10px;
+}

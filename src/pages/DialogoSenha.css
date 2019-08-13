@@ -9,6 +9,8 @@
 .containerTitulo p {
     font-size: 24px;
     margin-bottom: 0;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .loginContainer{
@@ -46,8 +48,5 @@
     font-weight: bold;
     color: #fff;
     cursor: pointer;
-}
-
-.inputSenha input[type=number] {
-    -webkit-text-security: disc;
+    box-shadow: 0px 2px 2px 0px grey;
 }

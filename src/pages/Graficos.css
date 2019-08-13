@@ -1,0 +1,17 @@
+.containerGraficos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerGraficos strong {
+    font-size: 24px;
+    margin: 10px;   
+}
+
+.containerGraficos .subtitulo {
+    font-size: 16px;
+    font-weight: 500;
+    color: #686868;
+    margin: 0px;
+}

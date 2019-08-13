@@ -16,6 +16,7 @@ import Configs from './Configs'
 import Extrato from './Extrato'
 import Graficos from './Graficos'
 import AdicionarGasto from './AdicionarGasto'
+import Fatura from './Fatura'
 import db from '../fb'
 import './Main.css'
 
@@ -50,6 +51,13 @@ export default function Main(props) {
         setOpen(false);
     }
 
+    function setCor(cor) {
+        setUser({
+            ...user,
+            cor
+        });
+    }
+
     return (
         <div className='divMain'>
             <MuiThemeProvider theme={getTheme()}>
@@ -68,7 +76,8 @@ export default function Main(props) {
                 <AdicionarGasto path='gasto' id={id}></AdicionarGasto>
                 <Extrato path='extrato' id={id}></Extrato>
                 <Graficos path='graficos' id={id}></Graficos>
-                <Configs path='configs' id={id}></Configs>
+                <Fatura path='fatura' id={id}></Fatura>
+                <Configs path='configs' id={id} setarCor={setCor}></Configs>
             </Router>
             <SwipeableDrawer open={open} onClose={fecharMenu} onOpen={abrirMenu}>
                 <div className='containerMenu'>
@@ -84,6 +93,12 @@ export default function Main(props) {
                                 <Icon>list</Icon>
                             </ListItemIcon>
                             <ListItemText>Extrato</ListItemText>
+                        </ListItem>
+                        <ListItem button onClick={() => {props.navigate(`/${id}/fatura`)}}>
+                            <ListItemIcon>
+                                <Icon>assignment</Icon>
+                            </ListItemIcon>
+                            <ListItemText>Fatura</ListItemText>
                         </ListItem>
                         <ListItem button onClick={() => {props.navigate(`/${id}/graficos`)}}>
                             <ListItemIcon>

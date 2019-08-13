@@ -36,10 +36,10 @@ export default function (props) {
 
     function handleClose(event, reason) {
         if (reason === 'clickaway') {
-          return;
+            return;
         }
         setOpenSnackbar(false);
-      }
+    }
 
     return (
         <div className='containerAdicionarGasto'>
@@ -60,9 +60,9 @@ export default function (props) {
                 message={<span id="mensagemSnackbar">Gasto adicionado!</span>}
                 action={[
                     <Button key="undo" color="secondary" size="small" onClick={handleClose}>
-                      Fechar
+                        Fechar
                     </Button>
-                  ]}
+                ]}
             >
             </Snackbar>
         </div>

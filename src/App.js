@@ -20,6 +20,7 @@ function App() {
 					<AdicionarGasto path='gasto'></AdicionarGasto>
 					<Extrato path='extrato'></Extrato>
 					<Graficos path='graficos'></Graficos>
+					<Graficos path='Fatura'></Graficos>
 					<Configs path='configs'></Configs>
 				</Main>
 			</Router>
