@@ -61,8 +61,8 @@ export default function(props){
                 ano--;
             }
             db.collection('gastos')
-            .where('data', '>=', new Date(`${_mes}-01-${ano}`))
-            .where('data', '<=', new Date(`${_mes}-31-${ano}`))
+            .where('data', '>=', getDataInicial(_mes, ano))
+            .where('data', '<=', getDataFinal(_mes, ano))
             .where('usuario', '==', user.id)
             .get().then((snapshot) => {
                 let _somaGastos = 0;
@@ -78,6 +78,18 @@ export default function(props){
         }
     }
 
+    function getDataInicial(_mes, ano){
+        return new Date(`${_mes}-01-${ano}`);
+    }
+
+    function getDataFinal(_mes, ano){
+        let data = new Date(`${_mes}-31-${ano}`);
+        data.setHours(23);
+        data.setMinutes(59);
+        data.setSeconds(59);
+        return data;
+    }
+
     function getNewDataDonut(somaGastos){
         const newDataDonut = {
             labels: [
@@ -85,7 +97,7 @@ export default function(props){
                 'Limite Restante'
             ],
             datasets: [{
-                data: [somaGastos, user.limite],
+                data: [somaGastos, getSaldoRestante(somaGastos)],
                 backgroundColor: [
                 '#aa0000',
                 '#007519',
@@ -93,6 +105,10 @@ export default function(props){
             }]
         }
         setDataDonut(newDataDonut);
+    }
+
+    function getSaldoRestante(somaGastos){
+        return user.limite - somaGastos > 0 ? user.limite - somaGastos : 0;
     }
 
     function getNewDataBarra(){
