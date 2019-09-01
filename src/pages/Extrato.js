@@ -41,6 +41,7 @@ export default function (props) {
 
     useEffect(() => {
         if(mes && ano && user){
+            console.log(getDataFinal());
             db.collection('gastos')
             .where('data', '>=', getDataInicial())
             .where('data', '<=', getDataFinal())
@@ -70,7 +71,11 @@ export default function (props) {
     }
 
     function getDataFinal(){
-        return new Date(`${meses.indexOf(mes) + 1}-31-${ano}`);
+        let data = new Date(`${meses.indexOf(mes) + 1}-31-${ano}`);
+        data.setHours(23);
+        data.setMinutes(59);
+        data.setSeconds(59);
+        return data;
     }
 
     function getSomaTotal(){
